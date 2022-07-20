@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+        
+        div{
+            background-color: cornsilk;
+            margin-top: 10%;
+            border-style:inset;border-color: black;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+        button{
+            padding: 10px;
+            color: blue;
+            background-color: yellow;
+            border-radius: 25px;
+            margin: 5px;
+            font-size: 18px;
+        }
+        .ld-btn{
+            border-collapse: collapse;
+        }
+        table{
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            border-top-right-radius: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <center>
+        <div style="width: 25%;height:auto ;">
+            <table  class="ld-btn" border="1" width="100%">
+                <tr><th colspan="2" style="border: none;"><h2>Like Dislike App</h2></th></tr>
+                <tr><th class="ld-btn"> 
+                        <button id="inc" onclick="inc()">Like</button>
+                        <h3 id="like"></h3>
+                    </th>
+                    <th>
+                        <button id="dis" onclick="dis()">Dislike</button>
+                        <h3 id="dislike"></h3>
+                    </th>
+                </tr>
+                <tr><th colspan="2"><h2 id="result"></h2></th></tr>
+            </table>
+        </div>
+    </center>
+
+    <script>
+        let l=0,d=0
+        var c=0
+        let count='Count is : '
+        let s='Total count is :'
+        let like_count=document.getElementById("like")
+            like_count.innerText=count+0
+            let dislike_count=document.getElementById("dislike")
+            dislike_count.innerText=count+0
+
+        let string=document.getElementById('result')
+        string.innerText=s+' '+c
+        function inc(){
+            l++
+            c++
+            let increamented=document.getElementById('result');
+            increamented.innerText=`${s} ${c}`
+            
+            like_count.innerText=count+l
+            alert('Liked !')
+            
+        }
+        function dis(){
+            d++
+            c++
+            let Decreamented=document.getElementById('result');
+            Decreamented.innerText=`${s} ${c}`
+            
+            dislike_count.innerText=count+d
+            alert('Disliked😢')
+            
+        }
+
+    </script>
+</body>
+</html>

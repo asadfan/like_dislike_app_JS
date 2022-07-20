@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        button{
+            border: none;
+            padding: 10px 20px;
+            background-color: red;
+            border-radius: 25px;
+        }
+        button:hover{
+            cursor: pointer;
+            color: blue;
+            background-color: yellow;
+            padding:10px  25px;
+            
+        }
+    </style>
+</head>
+<body>
+    <center>
+<h2>Employee data </h2><br><br>
+
+<h3 id="emp"></h3>
+
+<br>
+<button onclick="male()">Male</button>
+<button onclick="female()">Female</button>
+<button onclick="active()">Active</button>
+<button onclick="inactive()">Inactive</button>
+    </center>
+
+    <!-- Script code are in below -->
+
+    <script>
+        let employee=[
+            a={
+                name:'ASAD',
+                age:25,
+                gender:'Male'
+            },
+            b={
+                name:'AHMED',
+                age:27,
+                gender:'Male'
+            }
+        
+        ]
+        let male=()=>{
+            
+            let data=document.getElementById('emp')
+            
+            console.log(employee['a'].name)
+            
+        }
+        male()
+
+    </script>
+</body>
+</html>

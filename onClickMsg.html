@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        button{
+            border: none;
+            padding: 10px 20px;
+            background-color: red;
+            border-radius: 25px;
+        }
+        button:hover{
+            cursor: pointer;
+            color: blue;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1 id="Msg"></h1>
+        <br><br>
+        <button onclick="greetMsg()" id="click">Click here</button>
+    </center>
+
+<!-- Script code here -->
+<script>
+    let greetMsg=()=>
+    {
+        let msg=document.getElementById('Msg')
+        msg.innerText="Good Morning"
+        msg.style.color='red'
+        let click=document.getElementById('click')
+        click.style.fontStyle='italic'
+    }
+</script>
+
+</body>
+</html>

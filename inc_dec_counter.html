@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: cornsilk;
+            margin-top: 10%;
+        }
+        button{
+            padding: 10px;
+            color: blue;
+            background-color: yellow;
+            border-radius: 25px;
+        }
+        #inc{
+            float: left;
+        }
+        #dec{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div style="width: 25%;height:auto ;border:1px solid black">
+            <h2>Increament / Decreament</h2> <hr>
+            <button id="inc" onclick="inc()">Increament</button> 
+            <button id="dec" onclick="dec()">Decreament</button>
+            <br><br>
+            <hr>
+            <h2 id="result"></h2>
+
+        </div>
+    </center>
+
+    <script>
+        let i=0
+        let s='Count is :'
+        let string=document.getElementById('result')
+        string.innerText=s+' '+i
+        function inc(){
+            i++
+            let increamented=document.getElementById('result');
+            increamented.innerText=`${s} ${i}`
+        }
+        function dec(){
+            i--
+            let Decreamented=document.getElementById('result');
+            Decreamented.innerText=`${s} ${i}`
+        }
+
+    </script>
+</body>
+</html>
